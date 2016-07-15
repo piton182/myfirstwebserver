@@ -4,6 +4,6 @@
   "cowlib": {:hex, :cowlib, "1.0.2", "9d769a1d062c9c3ac753096f868ca121e2730b9a377de23dec0f7e08b1df84ee", [:make], []},
   "mongo": {:hex, :mongo, "0.5.4", "60633337f65b13e8f267f090c8b320d5e6b833faef18b1812cdd8d809e6fdb3a", [:mix], [{:bson, "~> 0.4.4", [hex: :bson, optional: false]}]},
   "mongodb": {:hex, :mongodb, "0.1.1", "8737d8f57466b4171f8216f76aa1ab3855d55220b19a1a248fedc96c9f50c274", [:mix], [{:poolboy, "~> 1.5", [hex: :poolboy, optional: true]}, {:connection, "~> 1.0", [hex: :connection, optional: false]}]},
-  "plug": {:hex, :plug, "0.10.0", "443f8c4bd92f8e1c461eaa811b72220fd3caf445d92a0253f39a8563d6cb8b11", [:mix], [{:cowboy, "~> 1.0", [hex: :cowboy, optional: true]}]},
+  "plug": {:hex, :plug, "1.1.6", "8927e4028433fcb859e000b9389ee9c37c80eb28378eeeea31b0273350bf668b", [:mix], [{:cowboy, "~> 1.0", [hex: :cowboy, optional: true]}]},
   "poolboy": {:hex, :poolboy, "1.5.1", "6b46163901cfd0a1b43d692657ed9d7e599853b3b21b95ae5ae0a777cf9b6ca8", [:rebar], []},
   "ranch": {:hex, :ranch, "1.2.1", "a6fb992c10f2187b46ffd17ce398ddf8a54f691b81768f9ef5f461ea7e28c762", [:make], []}}
