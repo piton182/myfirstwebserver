@@ -15,7 +15,7 @@ defmodule My.Web do
     {:ok, body} = cursor |> Enum.take(1) |> hd |> JSX.encode
 
     conn
-    |> Plug.Conn.put_resp_content_type("applicatin/json")
+    |> Plug.Conn.put_resp_content_type("application/json")
     |> Plug.Conn.send_resp(200, body)
   end
 
