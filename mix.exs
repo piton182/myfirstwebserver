@@ -35,7 +35,8 @@ defmodule MyFirstWebServer.Mixfile do
       {:plug, "1.1.6"},
       {:mongodb, "~> 0.1.1"},
       {:connection, "~> 1.0"},
-      {:poolboy, "~> 1.5"}
+      {:poolboy, "~> 1.5"},
+      {:exjsx, "~> 3.2"},
     ]
   end
 end
