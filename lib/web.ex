@@ -11,13 +11,12 @@ defmodule My.Web do
   end
 
   get "/hello" do
-    cursor = Mongo.find(My.MongoPool, "rides", %{}, [limit: 1])
-
-    text = cursor |> Enum.to_list |> IO.inspect
+    cursor = Mongo.find(My.MongoPool, "rides", %{})
+    body = cursor |> Enum.take(1) |> hd |> BSON.encode
 
     conn
     |> Plug.Conn.put_resp_content_type("text/plain")
-    |> Plug.Conn.send_resp(200, text)
+    |> Plug.Conn.send_resp(200, body)
   end
 
   match _ do
