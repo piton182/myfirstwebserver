@@ -12,7 +12,7 @@ defmodule My.Web do
 
   get "/hello" do
     cursor = Mongo.find(My.MongoPool, "rides", %{})
-    body = cursor |> Enum.take(1) |> hd |> JSX.encode
+    {:ok, body} = cursor |> Enum.take(1) |> hd |> JSX.encode
 
     conn
     |> Plug.Conn.put_resp_content_type("applicatin/json")
