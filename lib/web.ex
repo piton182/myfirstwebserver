@@ -19,6 +19,11 @@ defmodule My.Web do
     |> Plug.Conn.send_resp(200, body)
   end
 
+  get "/bkn_ref" do
+    conn
+    |> Plug.Conn.send_resp(200, "R201607250001")
+  end
+
   match _ do
     Plug.Conn.send_resp(conn, 404, "not found")
   end
