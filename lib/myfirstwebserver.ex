@@ -7,6 +7,6 @@ defmodule MyFirstWebServer do
 
     pid = My.BknRefKeeper.start
     Process.register pid, :bkn_ref_keeper
-    {:ok, _}
+    :ok
   end
 end
