@@ -20,7 +20,11 @@ defmodule My.Web do
   end
 
   get "/bkn_ref" do
-    {:ok, body} = %{ :bkn_ref => "R201607250001" } |> JSX.encode
+    send :bkn_ref_keeper, {:get_bkn_ref, self()}
+    receive do
+      {:bkn_ref, ref} ->
+        {:ok, body} = %{ :bkn_ref => ref } |> JSX.encode
+    end
 
     conn
     |> Plug.Conn.put_resp_content_type("application/json")
