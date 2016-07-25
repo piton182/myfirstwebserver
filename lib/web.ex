@@ -8,6 +8,7 @@ defmodule My.Web do
     Plug.Adapters.Cowboy.http(__MODULE__, nil, port: 5454)
     # {:ok, _} = My.MongoPool.start_link hostname: "localhost", port: 3001, database: "meteor"
     {:ok, _} = My.MongoPool.start_link hostname: "ds031942.mlab.com", port: 31942, database: "taxi-hop-on", username: "macaw", password: "parrot"
+    :ok
   end
 
   get "/hello" do
