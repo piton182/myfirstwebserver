@@ -21,7 +21,6 @@ defmodule My.Web do
 
   get "/bkn_ref" do
     conn
-    |> Plug.Conn.put_resp_content_type("plain/text")
     |> Plug.Conn.send_resp(200, "R201607250001")
   end
 
