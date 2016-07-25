@@ -2,11 +2,10 @@ defmodule MyFirstWebServer do
   use Application
 
   def start(_type, _args) do
-    My.Web.start_server
+    {:ok, web_pid} = My.Web.start_server |> IO.inspect
     # Task.start(fn -> :timer.sleep(10000); IO.puts("done sleeping") end)
 
-    pid = My.BknRefKeeper.start
-    Process.register pid, :bkn_ref_keeper
-    :ok
+    My.BknRefKeeper.start |> Process.register(:bkn_ref_keeper)
+    {:ok, web_pid}
   end
 end
